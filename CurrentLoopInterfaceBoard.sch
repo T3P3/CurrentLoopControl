@@ -1,0 +1,591 @@
+EESchema Schematic File Version 2
+LIBS:CurrentLoopInterfaceBoard-rescue
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:CurrentLoopInterfaceBoard-cache
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "Current Loop Interface Board"
+Date "2017-05-18"
+Rev "v0.4"
+Comp "Think3dPrint3d and Escher3d"
+Comment1 "CERN OHL v1.2"
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L CONN_01X02 P1
+U 1 1 591B72D6
+P 3050 3075
+F 0 "P1" H 3050 3225 50  0000 C CNN
+F 1 "INPUT" V 3150 3075 50  0000 C CNN
+F 2 "complib:PIN_ARRAY_2X1" H 3050 3075 50  0001 C CNN
+F 3 "" H 3050 3075 50  0000 C CNN
+	1    3050 3075
+	1    0    0    -1  
+$EndComp
+Text GLabel 1425 5200 0    60   Input ~ 0
+HEATER_INPUT+
+Text GLabel 1425 5350 0    60   Input ~ 0
+HEATER_INPUT-
+$Comp
+L R_Small R1
+U 1 1 591B736F
+P 1650 5075
+F 0 "R1" V 1725 5025 50  0000 L CNN
+F 1 "4K7 0.2W 5%" V 1550 4800 50  0000 L CNN
+F 2 "complib:R_0805" H 1650 5075 50  0001 C CNN
+F 3 "" H 1650 5075 50  0000 C CNN
+	1    1650 5075
+	0    1    1    0   
+$EndComp
+$Comp
+L D D2
+U 1 1 591B73FE
+P 2000 5300
+F 0 "D2" H 2000 5400 50  0000 C CNN
+F 1 "1N4148WT" H 2000 5200 50  0000 C CNN
+F 2 "complib:D_SOD-123F" H 2000 5300 50  0001 C CNN
+F 3 "1N4148WT" H 2000 5300 50  0001 C CNN
+	1    2000 5300
+	0    1    1    0   
+$EndComp
+$Comp
+L TLP131-RESCUE-CurrentLoopInterfaceBoard U3
+U 1 1 591B7579
+P 3025 5275
+F 0 "U3" H 2825 5475 50  0000 L CNN
+F 1 "TLP2310" H 3025 5475 50  0000 L CNN
+F 2 "complib:SO6_with_5pins" H 2825 5075 50  0001 L CIN
+F 3 "" H 3025 5275 50  0000 L CNN
+	1    3025 5275
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1425 5200 1550 5200
+Wire Wire Line
+	1550 5200 1550 5075
+Wire Wire Line
+	1750 5075 2175 5075
+Wire Wire Line
+	2000 5075 2000 5150
+Wire Wire Line
+	2725 5075 2725 5175
+Connection ~ 2000 5075
+Wire Wire Line
+	1425 5350 1550 5350
+Wire Wire Line
+	1550 5350 1550 5450
+Wire Wire Line
+	1550 5450 2725 5450
+Wire Wire Line
+	2725 5450 2725 5375
+Connection ~ 2000 5450
+$Comp
+L R_Small R6
+U 1 1 591B783C
+P 3850 5275
+F 0 "R6" V 3925 5225 50  0000 L CNN
+F 1 "22K 1%" V 3775 5175 50  0000 L CNN
+F 2 "complib:R_0603" H 3850 5275 50  0001 C CNN
+F 3 "" H 3850 5275 50  0000 C CNN
+	1    3850 5275
+	0    1    1    0   
+$EndComp
+$Comp
+L R_Small R7
+U 1 1 591B78AF
+P 4325 5275
+F 0 "R7" V 4400 5225 50  0000 L CNN
+F 1 "47K 1%" V 4250 5175 50  0000 L CNN
+F 2 "complib:R_0603" H 4325 5275 50  0001 C CNN
+F 3 "" H 4325 5275 50  0000 C CNN
+	1    4325 5275
+	0    1    1    0   
+$EndComp
+$Comp
+L C_Small C3
+U 1 1 591B78DF
+P 4050 5425
+F 0 "C3" H 4060 5495 50  0000 L CNN
+F 1 "4u7 10% >=6.3V X5R/X7R" V 3925 4400 50  0000 L CNN
+F 2 "complib:C_0603" H 4050 5425 50  0001 C CNN
+F 3 "" H 4050 5425 50  0000 C CNN
+	1    4050 5425
+	1    0    0    -1  
+$EndComp
+$Comp
+L C_Small C4
+U 1 1 591B7BBA
+P 4575 5425
+F 0 "C4" H 4585 5495 50  0000 L CNN
+F 1 "4u7 10% >=6.3V X5R/X7R" V 4500 4425 50  0000 L CNN
+F 2 "complib:C_0603" H 4575 5425 50  0001 C CNN
+F 3 "" H 4575 5425 50  0000 C CNN
+	1    4575 5425
+	1    0    0    -1  
+$EndComp
+$Comp
+L C_Small C2
+U 1 1 591B7C02
+P 6125 4950
+F 0 "C2" H 6000 5025 50  0000 L CNN
+F 1 "1u X5R/X7R" V 6250 4725 50  0000 L CNN
+F 2 "complib:C_0603" H 6125 4950 50  0001 C CNN
+F 3 "" H 6125 4950 50  0000 C CNN
+	1    6125 4950
+	1    0    0    -1  
+$EndComp
+$Comp
+L MCP6001-RESCUE-CurrentLoopInterfaceBoard U2
+U 1 1 591B7CD5
+P 5300 5150
+F 0 "U2" H 5350 5350 50  0000 C CNN
+F 1 "MCP6286" H 5500 4950 50  0000 C CNN
+F 2 "complib:SOT-23-5L" H 5250 5250 50  0001 C CNN
+F 3 "" H 5350 5350 50  0000 C CNN
+	1    5300 5150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3325 5275 3750 5275
+Wire Wire Line
+	3950 5275 4225 5275
+Wire Wire Line
+	4050 5275 4050 5325
+Connection ~ 4050 5275
+Wire Wire Line
+	3325 5375 3475 5375
+Wire Wire Line
+	3475 5375 3475 5550
+Wire Wire Line
+	4575 5050 4575 5325
+Wire Wire Line
+	4575 5275 4425 5275
+$Comp
+L R_Small R5
+U 1 1 591B865E
+P 4725 5050
+F 0 "R5" V 4800 5000 50  0000 L CNN
+F 1 "47K 1%" V 4650 4950 50  0000 L CNN
+F 2 "complib:R_0603" H 4725 5050 50  0001 C CNN
+F 3 "" H 4725 5050 50  0000 C CNN
+	1    4725 5050
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4575 5050 4625 5050
+Connection ~ 4575 5275
+Wire Wire Line
+	4825 5050 5000 5050
+$Comp
+L R_Small R10
+U 1 1 591B8753
+P 5175 5925
+F 0 "R10" V 5250 5875 50  0000 L CNN
+F 1 "10K 1%" V 5100 5825 50  0000 L CNN
+F 2 "complib:R_0603" H 5175 5925 50  0001 C CNN
+F 3 "" H 5175 5925 50  0000 C CNN
+	1    5175 5925
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5200 5525 5200 5450
+Wire Wire Line
+	5000 5550 5000 5250
+Wire Wire Line
+	4900 4725 4900 5925
+Wire Wire Line
+	4900 5925 5075 5925
+Connection ~ 4900 5050
+Wire Wire Line
+	3325 5175 3450 5175
+Wire Wire Line
+	3450 5175 3450 4375
+Wire Wire Line
+	3450 4375 6125 4375
+Wire Wire Line
+	5200 4375 5200 4850
+$Comp
+L R_Small R4
+U 1 1 591B8D3F
+P 5825 4950
+F 0 "R4" V 5900 4900 50  0000 L CNN
+F 1 "1K 5%" V 5750 4850 50  0000 L CNN
+F 2 "complib:R_0603" H 5825 4950 50  0001 C CNN
+F 3 "" H 5825 4950 50  0000 C CNN
+	1    5825 4950
+	-1   0    0    1   
+$EndComp
+$Comp
+L C_Small C1
+U 1 1 591B8E26
+P 5475 4175
+F 0 "C1" H 5485 4245 50  0000 L CNN
+F 1 "1u" H 5485 4095 50  0000 L CNN
+F 2 "complib:C_0603" H 5475 4175 50  0001 C CNN
+F 3 "" H 5475 4175 50  0000 C CNN
+	1    5475 4175
+	1    0    0    -1  
+$EndComp
+$Comp
+L R_Small R2
+U 1 1 591B8EA8
+P 5475 3850
+F 0 "R2" V 5550 3800 50  0000 L CNN
+F 1 "20R 5%" V 5400 3750 50  0000 L CNN
+F 2 "complib:R_0603" H 5475 3850 50  0001 C CNN
+F 3 "" H 5475 3850 50  0000 C CNN
+	1    5475 3850
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	5475 4375 5475 4275
+Connection ~ 5200 4375
+Wire Wire Line
+	5475 4075 5475 3950
+Wire Wire Line
+	6125 4325 6125 4850
+Connection ~ 5475 4375
+Wire Wire Line
+	5600 5150 5825 5150
+Wire Wire Line
+	5825 5150 5825 5050
+Wire Wire Line
+	5825 4850 5825 3625
+Wire Wire Line
+	5475 3750 5475 3625
+Wire Wire Line
+	5475 3625 6100 3625
+Wire Wire Line
+	6125 5525 6125 5050
+$Comp
+L D D1
+U 1 1 591B9611
+P 6825 3175
+F 0 "D1" H 6825 3275 50  0000 C CNN
+F 1 "1N4148WT" H 6825 3075 50  0000 C CNN
+F 2 "complib:D_SOD-123F" H 6825 3175 50  0001 C CNN
+F 3 "1N4148WT" H 6825 3175 50  0001 C CNN
+	1    6825 3175
+	1    0    0    -1  
+$EndComp
+$Comp
+L R_Small R3
+U 1 1 591B9B18
+P 6600 4425
+F 0 "R3" V 6675 4375 50  0000 L CNN
+F 1 "2K4 1%" H 6275 4425 50  0000 L CNN
+F 2 "complib:R_0603" H 6600 4425 50  0001 C CNN
+F 3 "" H 6600 4425 50  0000 C CNN
+	1    6600 4425
+	-1   0    0    1   
+$EndComp
+$Comp
+L R_Small R8
+U 1 1 591B9B8F
+P 6600 5375
+F 0 "R8" V 6675 5325 50  0000 L CNN
+F 1 "1K2 1%" H 6275 5350 50  0000 L CNN
+F 2 "complib:R_0603" H 6600 5375 50  0001 C CNN
+F 3 "" H 6600 5375 50  0000 C CNN
+	1    6600 5375
+	-1   0    0    1   
+$EndComp
+$Comp
+L R_Small R9
+U 1 1 591B9C16
+P 6600 5775
+F 0 "R9" V 6675 5725 50  0000 L CNN
+F 1 "20R 1%" H 6225 5775 50  0000 L CNN
+F 2 "complib:R_0603" H 6600 5775 50  0001 C CNN
+F 3 "" H 6600 5775 50  0000 C CNN
+	1    6600 5775
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	5275 5925 7175 5925
+Wire Wire Line
+	6600 5925 6600 5875
+Wire Wire Line
+	6600 5475 6600 5675
+Connection ~ 6125 5525
+Connection ~ 6600 5525
+Wire Wire Line
+	6125 4325 6600 4325
+Connection ~ 6125 4375
+Wire Wire Line
+	6400 3775 6400 4975
+Connection ~ 6400 4325
+Connection ~ 5825 3625
+Wire Wire Line
+	6400 3175 6400 3375
+Wire Wire Line
+	6400 3175 6675 3175
+Connection ~ 6600 5925
+Text GLabel 7600 3175 2    60   Input ~ 0
+CONTROL_OUTPUT+
+Text GLabel 2725 3000 0    60   Input ~ 0
+HEATER_INPUT+
+Text GLabel 2725 3150 0    60   Input ~ 0
+HEATER_INPUT-
+Wire Wire Line
+	2725 3000 2800 3000
+Wire Wire Line
+	2800 3000 2800 3025
+Wire Wire Line
+	2800 3025 2850 3025
+Wire Wire Line
+	2850 3125 2800 3125
+Wire Wire Line
+	2800 3125 2800 3150
+Wire Wire Line
+	2800 3150 2725 3150
+Text GLabel 7175 5925 2    60   Input ~ 0
+CONTROL_OUTPUT-
+$Comp
+L CONN_01X02 P2
+U 1 1 591BEB9F
+P 4700 3075
+F 0 "P2" H 4700 3225 50  0000 C CNN
+F 1 "OUTPUT" V 4800 3075 50  0000 C CNN
+F 2 "FE Footprints:3.5MM_2X1" H 4700 3075 50  0001 C CNN
+F 3 "" H 4700 3075 50  0000 C CNN
+	1    4700 3075
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4375 3000 4450 3000
+Wire Wire Line
+	4450 3000 4450 3025
+Wire Wire Line
+	4450 3025 4500 3025
+Wire Wire Line
+	4500 3125 4450 3125
+Wire Wire Line
+	4450 3125 4450 3150
+Wire Wire Line
+	4450 3150 4375 3150
+Text GLabel 4375 3000 0    60   Input ~ 0
+CONTROL_OUTPUT+
+Text GLabel 4375 3150 0    60   Input ~ 0
+CONTROL_OUTPUT-
+$Comp
+L TLV431 U1
+U 1 1 591CB087
+P 6400 5075
+F 0 "U1" H 6225 5025 50  0000 L CNN
+F 1 "TLV431_B" V 6400 4475 50  0000 L CNN
+F 2 "complib:SOT-23" V 6400 5075 50  0001 C CNN
+F 3 "" V 6400 5075 50  0000 C CNN
+	1    6400 5075
+	0    -1   1    0   
+$EndComp
+Wire Wire Line
+	6600 4525 6600 5275
+Wire Wire Line
+	6600 5075 6500 5075
+Connection ~ 6600 5075
+Wire Wire Line
+	6400 5525 6400 5175
+Connection ~ 6400 5525
+$Comp
+L Mounting M4
+U 1 1 591D267C
+P 1600 7275
+F 0 "M4" H 1600 7175 60  0000 C CNN
+F 1 "Mounting" H 1600 7375 60  0000 C CNN
+F 2 "complib:Fixing_M3" H 1600 7275 60  0001 C CNN
+F 3 "" H 1600 7275 60  0000 C CNN
+	1    1600 7275
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mounting M1
+U 1 1 591D293A
+P 1150 6925
+F 0 "M1" H 1150 6825 60  0000 C CNN
+F 1 "Logo" H 1150 7025 60  0000 C CNN
+F 2 "complib:LOGO_Duet3dCompatible_xs" H 1150 6925 60  0001 C CNN
+F 3 "" H 1150 6925 60  0000 C CNN
+	1    1150 6925
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mounting M3
+U 1 1 591D305B
+P 1175 7275
+F 0 "M3" H 1175 7175 60  0000 C CNN
+F 1 "Mounting" H 1175 7375 60  0000 C CNN
+F 2 "complib:Fixing_M3" H 1175 7275 60  0001 C CNN
+F 3 "" H 1175 7275 60  0000 C CNN
+	1    1175 7275
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mounting M2
+U 1 1 591D30DA
+P 750 7275
+F 0 "M2" H 750 7175 60  0000 C CNN
+F 1 "Mounting" H 750 7375 60  0000 C CNN
+F 2 "complib:Fixing_M3" H 750 7275 60  0001 C CNN
+F 3 "" H 750 7275 60  0000 C CNN
+	1    750  7275
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mounting M5
+U 1 1 591D31EF
+P 2025 7275
+F 0 "M5" H 2025 7175 60  0000 C CNN
+F 1 "Mounting" H 2025 7375 60  0000 C CNN
+F 2 "complib:Fixing_M3" H 2025 7275 60  0001 C CNN
+F 3 "" H 2025 7275 60  0000 C CNN
+	1    2025 7275
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mounting M6
+U 1 1 591D6E67
+P 2450 7275
+F 0 "M6" H 2450 7175 60  0000 C CNN
+F 1 "FID" H 2450 7375 60  0000 C CNN
+F 2 "complib:Fiducial_1mm_Dia_2.54mm_Outer_CopperTop" H 2450 7275 60  0001 C CNN
+F 3 "" H 2450 7275 60  0000 C CNN
+	1    2450 7275
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5000 5525 6600 5525
+Connection ~ 5200 5525
+Wire Wire Line
+	3475 5550 5000 5550
+Wire Wire Line
+	4575 5550 4575 5525
+Connection ~ 5000 5525
+Wire Wire Line
+	4050 5550 4050 5525
+Connection ~ 4575 5550
+Connection ~ 4050 5550
+$Comp
+L R_Small R11
+U 1 1 591DBB66
+P 4900 4625
+F 0 "R11" V 4975 4575 50  0000 L CNN
+F 1 "464K 1%" V 4750 4500 50  0000 L CNN
+F 2 "complib:R_0603" H 4900 4625 50  0001 C CNN
+F 3 "" H 4900 4625 50  0000 C CNN
+	1    4900 4625
+	1    0    0    -1  
+$EndComp
+$Comp
+L LED-RESCUE-CurrentLoopInterfaceBoard D4
+U 1 1 591E2B45
+P 2375 5075
+F 0 "D4" H 2375 5175 50  0000 C CNN
+F 1 "IN" H 2375 4975 50  0000 C CNN
+F 2 "complib:LED_0603" H 2375 5075 50  0001 C CNN
+F 3 "" H 2375 5075 50  0000 C CNN
+	1    2375 5075
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	2725 5075 2575 5075
+$Comp
+L LED-RESCUE-CurrentLoopInterfaceBoard D3
+U 1 1 591E535B
+P 7325 3175
+F 0 "D3" H 7325 3275 50  0000 C CNN
+F 1 "OUT" H 7325 3075 50  0000 C CNN
+F 2 "complib:LED_0805" H 7325 3175 50  0001 C CNN
+F 3 "" H 7325 3175 50  0000 C CNN
+	1    7325 3175
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7600 3175 7525 3175
+Wire Wire Line
+	7125 3175 6975 3175
+$Comp
+L BSP149 Q1
+U 1 1 591E7168
+P 6300 3575
+F 0 "Q1" H 6500 3650 50  0000 L CNN
+F 1 "BSP149" H 6500 3575 50  0000 L CNN
+F 2 "TO_SOT_Packages_SMD:SOT-223" H 6500 3500 50  0001 L CIN
+F 3 "" H 6300 3575 50  0000 L CNN
+	1    6300 3575
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6350 3375 6350 3325
+Wire Wire Line
+	6350 3325 6400 3325
+Connection ~ 6400 3325
+Wire Wire Line
+	4900 4525 4900 4375
+Connection ~ 4900 4375
+$Comp
+L R_Small R12
+U 1 1 591ED0D8
+P 7300 3475
+F 0 "R12" V 7375 3425 50  0000 L CNN
+F 1 "470R" V 7200 3300 50  0000 L CNN
+F 2 "complib:R_0603" H 7300 3475 50  0001 C CNN
+F 3 "" H 7300 3475 50  0000 C CNN
+	1    7300 3475
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	7550 3175 7550 3475
+Wire Wire Line
+	7550 3475 7400 3475
+Connection ~ 7550 3175
+Wire Wire Line
+	7200 3475 7050 3475
+Wire Wire Line
+	7050 3475 7050 3175
+Connection ~ 7050 3175
+$Comp
+L Mounting M7
+U 1 1 591EE07B
+P 2675 7275
+F 0 "M7" H 2675 7175 60  0000 C CNN
+F 1 "FID" H 2675 7375 60  0000 C CNN
+F 2 "complib:Fiducial_1mm_Dia_2.54mm_Outer_CopperTop" H 2675 7275 60  0001 C CNN
+F 3 "" H 2675 7275 60  0000 C CNN
+	1    2675 7275
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC

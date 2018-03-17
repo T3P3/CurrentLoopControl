@@ -1,0 +1,30 @@
+PWM-to-current loop board accuracy analysis,,,,,,,
+,,,,,,,
+Component property,Nominal value,Alternative value,Units,Tolerance,Alternative tolerance,Tolerance units,Comments
+,,,,,,,
+TLV431B voltage @ 10mA and 25C,1.24,1.24,V,0.5,0.5,%,
+TLV431B reference terminal input current,0.1,0.1,uA,0.4,0.4,uA,"0.1 typical, 0.5 maximum"
+R3 value,2.4,2.4,Kohms,1,0.1,%,
+R5 value,47,12,Kohms,1,0.1,%,
+R6 value,22,11,Kohms,1,0.1,%,
+R7 value,47,12,Kohms,1,0.1,%,
+R8 value,1.2,1.2,Kohms,1,0.1,%,
+R9 value,20,100,ohms,1,0.1,%,
+R10 value,10,15,Kohms,1,0.1,%,
+R11 value,464,143,Kohms,1,0.1,%,
+Op amp input offset voltage,0,0,mV,1.5,1.5,mV,
+,,,,,,,
+Supply voltage,3.72024,3.72024,,,,,
+Effective value of R9,0.01996,0.09934,Kohms,,,,R10 is effectively in parallel with R9
+,,,,,,,
+Nominal output current at zero PWM,4.0169,3.9284,mA,,,,
+Nominal output current at full PWM,20.0845,19.9785,mA,,,,
+,,,,,,,
+Max error due to op amp offset @ 4mA,0.07662,0.01658,mA,,,,The absolute error will be almost the same at all PWM settings
+Worst case 4mA error due to component tolerances,0.22000,0.04000,mA,,,,
+Worst case 4mA error due to extra reference current,0.00004,0.00004,,,,,
+"Worst case 4mA error, all causes",0.29662,0.05658,mA,,,,
+Likely 4mA error due to component tolerances,0.09165,0.02191,mA,,,,
+"Likely 4mA error, all causes",0.11946,0.02748,mA,,,,
+,,,,,,,
+Voltage drop @ 20mA,4.12,5.71,V,,,,Not including the two diodes
